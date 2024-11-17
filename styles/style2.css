@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #F4F4F9;
+    color: #333;
+  }
+  
+  
+  header {
+    background-color: #2C003E;
+    color: #FFF;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .inner-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+  
+  .logo img {
+    width: 8rem;
+  }
+  
+  .logo h1 {
+    background-clip: text;
+    color: #FF69B4;
+    font-size: 15px;
+  }
+  
+  nav a {
+    margin: 3rem;
+    padding-bottom: 0.2rem;
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all ease .2s;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    color: #FF69B4;
+  }
+  
+  /* Seção do Catálogo */
+  .catalog-section {
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  .catalog-section h2 {
+    font-size: 2rem;
+    color: #2C003E;
+    margin-bottom: 20px;
+  }
+  
+  .catalog-section p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    color: #666;
+  }
+  
+  .catalog-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .catalog-card {
+    background-color: #FFF;
+    border: 1px solid #DDD;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 15px;
+  }
+  
+  .catalog-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .catalog-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .catalog-card h3 {
+    font-size: 1.5rem;
+    color: #2C003E;
+    margin: 15px 0 10px;
+  }
+  
+  .catalog-card .description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .catalog-card .price {
+    font-size: 1.2rem;
+    color: #C43FCC;
+    margin-bottom: 15px;
+  }
+  
+  .catalog-card .btn {
+    padding: 10px 20px;
+    background-color: #2C003E;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .catalog-card .btn:hover {
+    background-color: #9e32a3;
+  }
+  
+
+  footer {
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: #ffffff;
+    background: #2C003E;
+    cursor: default;
+    margin-top: 30  0px;
+    margin-bottom: 0;
+  }
+  
+  footer p {
+    font-size: 0.9rem;
+  }
+  
+  footer a {
+    color: #C43FCC;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    color: #FFF;
+  }
+  
