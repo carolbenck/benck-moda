@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald&display=swap');
 
+/* reseta tudo pra começar com um layout limpinho */
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +12,7 @@
 
 body {
   background: #2C003E;
+  touch-action: pan-y; /* solução para o zoom no celular */
 }
 
 header {
@@ -18,8 +20,7 @@ header {
   position: fixed;
   background: #2C003E;
   box-shadow: 0px 0px 30px #000000aa;
-  backdrop-filter: blur(10px);
-  z-index: 99;
+  z-index: 99; /* pra ficar na frente dos outros elementos */
 }
 
 .logo {
@@ -31,7 +32,7 @@ header {
 }
 
 .logo img {
-  width: 8rem;
+  width: 8rem;   /* ajusta tamanho da logo */
 }
 
 .logo h1 {
@@ -40,6 +41,8 @@ header {
   font-size: 15px;
 }
 
+
+/* organiza as coisas dentro do cabeçalho */
 .inner-header {
   display: flex;
   align-items: center;
@@ -63,33 +66,31 @@ nav a {
 }
 
 nav a:hover {
-  color: #FF69B4;
+  color: #FF69B4; /* efeito pra quando passar o mouse em cima do nav mudar de cor */
 }
 
 nav a:active {
-  opacity: .6;
+  opacity: .6; /* efeito pra quando clicar escurecer um pouquinho a cor da palavra */
 }
 
-.hero-container section {
-  padding-top: 11rem;
-}
 
-.hero-container {
+.container {
   background: #af43b0;
 }
 
-.hero-container section {
+.container section {
   min-height: 100vh;
   display: flex;
   align-items: center;
+  padding-top: 11rem;
 }
 
-.inner-hero {
+.conteudo-container {
   max-width: 60rem;
   color: var(--white);
 }
-
-.inner-hero h2 {
+ /* titulo da segunda pag */ 
+.conteudo-container h2 {
   font-size: 6.2rem;
   font-weight: 900;
   line-height: 1;
@@ -98,7 +99,7 @@ nav a:active {
   text-shadow: 0px 0px 8px #00000099;
 }
 
-.inner-hero p {
+.conteudo-container p {
   width: 95%;
   margin: 1.2rem 0 0 0.4rem;
   font-size: 1.9rem;
@@ -171,7 +172,7 @@ nav a:active {
   color: #af43b0;
   transition: background-color 0.3s ease;
 }
-.inner-hero .btn {
+.conteudo-container .btn {
   box-shadow: 0px 0px 15px #000000;
 }
 
@@ -191,7 +192,7 @@ nav a:active {
   justify-content: center;
 }
 
-.inner-about {
+.itens-about {
   padding: 0;
   display: flex;
   align-items: center;
@@ -214,12 +215,12 @@ nav a:active {
   box-shadow: inset 0px 0px 30px #000;
 }
 
-.inner-text {
+.itens-text {
   max-width: 570px;
   margin: 0 auto;
   color: #ffffff;
 }
-.inner-text button {
+.itens-text button {
   background: #FF69B4;
   color: #2C003E;
 }
@@ -239,25 +240,26 @@ nav a:active {
   text-shadow: 1px 1px 2px #000000;
 }
 
-.inner-about .btn {
+.itens-about .btn {
   background: #FF69B4;
   color: #2C003E;
   border: 1px solid #FF69B4;
 }
 
-.inner-about .btn:hover {
+.itens-about .btn:hover {
   background: #2C003E;
   color: #FF69B4;
   text-shadow: none;
 }
 
-.inner-about .btn:active {
+.itens-about .btn:active {
   opacity: .6;
 }
 
 #menu {
   min-height: 100vh;
   padding: 10rem 0;
+  /* faz uma sombrinha ali em cima dos itens do cataogo */
   background: linear-gradient(to bottom, #090403 0%, #00000055 10%, #00000099 60%,#090403 100%), url("./assets/menu2.jpg") no-repeat right/cover;
 }
 
@@ -283,7 +285,6 @@ nav a:active {
 }
 
 .cards {
-  /* max-width: 1200px; */
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -318,13 +319,6 @@ nav a:active {
 .card img:hover{
   width: 20rem;
   border-radius: 50%;
-}
-
-.expandida {
-  width: 15rem;
-  border-radius: 50%;
-  cursor: pointer;
-  
 }
 
 .card h3 {
@@ -362,12 +356,12 @@ nav a:active {
   font-size: 1.5rem;
 }
 
-.card:hover>* {
+.card:hover>* /* todos os elementos do card vão obedecer a isso */ {
   color: #000000;
   transition: ease .5s;
 }
 
-.card:hover>button {
+.card:hover>button /* somente os botões do card vão obedecer a isso */{
   padding: 1rem 2rem;
   color:  #FF69B4;
   background: #2C003E;
@@ -438,12 +432,6 @@ footer a:active {
   opacity: .7;
 }
 
-@media screen and (max-width: 1350px) {
-  .carousel {
-    max-width: 830px;
-  }
-}
-
 @media screen and (max-width: 768px) {
   nav {
     display: none;
@@ -453,22 +441,22 @@ footer a:active {
     justify-content: space-around;
   }
 
-  .hero-container {
+  .container {
     background: linear-gradient(to bottom, transparent 70%, #090403 100%);
     background-position: -1000px;
   }
 
-  .hero-container section {
+  .container section {
     justify-content: center;
     align-items: flex-end;
   }
   
-  .inner-hero {
+  .conteudo-container {
     text-align: center;
     padding-bottom: 3rem;
   }
   
-  .inner-hero h2 {
+  .conteudo-container h2 {
     margin: 0 auto;
     padding: 1rem;
     max-width: 500px;
@@ -476,7 +464,7 @@ footer a:active {
     text-shadow: 0px 0px 15px #000000;
   }
   
-  .inner-hero p {
+  .conteudo-container p {
     width: 90%;
     margin: 0 auto;
     font-size: 1.6rem;
@@ -497,7 +485,7 @@ footer a:active {
     margin: 3rem 0;
   }
 
-  .inner-about {
+  .itens-about {
     flex-direction: column;
     background-position: right;
   }
@@ -512,40 +500,13 @@ footer a:active {
     font-size: 3.7vh;
   }
 
-  .inner-about .btn {
+  .itens-about .btn {
     display: block;
     margin: 2rem auto;
   }
 
   #menu {
     padding: 5rem 0;;
-  }
-
-  #reviews {
-    padding: 5rem 0;
-  }
-  
-  .reviews {
-    width: 300px;
-  }
-  
-  .review {
-    width: 300px;
-  }
-
-  
-  .carousel {
-    width: 340px;
-    padding: 0 2rem;
-  }
-
-  #address section {
-    padding: 0;
-  }
-
-  iframe {
-    width: 100%;
-    height: 400px;
   }
 
   footer {
